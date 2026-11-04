@@ -1,0 +1,1453 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<title>FansBuy spreadsheet: jak porównywać znaleziska | hipobuyfind.com</title>
+<meta name="description" content="FansBuy spreadsheet po polsku: porównuj linki, warianty i zdjęcia produktów. Poznaj kryteria wyboru butów, ubrań i dodatków oraz pytania przed zakupem.">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="theme-color" content="#733f2d">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="pl_PL">
+<meta property="og:site_name" content="hipobuyfind.com">
+<meta property="og:title" content="FansBuy spreadsheet — mniej zgadywania, lepsze porównanie">
+<meta property="og:description" content="Praktyczny przewodnik po informacjach, których potrzebujesz przed wyborem butów, ubrań i dodatków.">
+<meta property="og:image" content="https://static.nike.com/a/images/t_default/u_9ddf04c7-2a9a-4d76-add1-d15af8f0263d,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/1297bf15-b0fb-4dbd-a45e-25b362df01be/AIR+MAX+DN8.png">
+<meta property="og:image:alt" content="Czarny but Nike Air Max Dn8 z pomarańczowymi panelami i czerwonymi elementami podeszwy">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://static.nike.com" crossorigin>
+<!--
+Plik: index.html.
+Uzupełnij canonical i og:url o rzeczywisty adres tego dokumentu po ustaleniu
+miejsca publikacji. Nie wskazuj strony głównej zamiast adresu artykułu.
+-->
+<!--
+Nota badawcza, 4 listopada 2026.
+Wylosowane hasło: FansBuy spreadsheet.
+
+Bezpośredni odczyt Google był niedostępny. Poniższe 10 domen sprawdzono
+przez dostępną wyszukiwarkę; nie są potwierdzoną pierwszą dziesiątką Google.
+Intencje są syntezą, nie skopiowanymi opisami meta.
+
+1. https://fansbuy.net/spreadsheet
+   Katalog, kategorie, przewodnik, zdjęcia QC.
+
+2. https://fansbuy.com/
+   Zamawianie przez adres produktu; odczyt strony ograniczony,
+   dostępny wynik wyszukiwania.
+
+3. https://fansbuyspreadsheet.com/faq.html
+   Definicja, opłaty, magazynowanie, wysyłka; liczb nie przeniesiono.
+
+4. https://usfansyupoo.com/agents/fansbuy/
+   Oryginalny identyfikator produktu i wariant.
+
+5. https://fansbuylists.com/
+   Buty, ubrania, zdjęcia i odnośniki do ofert.
+
+6. https://fansbuy.org/
+   Katalog wizualny, odkrywanie produktów, oddzielne etapy zamówienia.
+
+7. https://one-to-oneyupoo.com/spreadsheets/fansbuy/
+   Pochodzenie rekordu, wyszukiwanie, aktualna oferta.
+
+8. https://mixfittio.com/en/spreadsheet/fansbuy
+   Filtrowanie katalogu, SKU, składniki kosztu.
+
+9. https://fansbuy.co.uk/catalog/
+   Karty produktów zamiast pliku Excel, kategorie i pomiary.
+
+10. https://www.fansbuys.net/
+    Notatki, kontrola odnośników, kompletność wiersza.
+
+Wybrano 4 tematy pomocnicze:
+- poradnik FansBuy spreadsheet;
+- linki do produktów FansBuy;
+- zdjęcia QC FansBuy;
+- rozmiary w FansBuy spreadsheet.
+
+Treść autorska. Brak deklaracji wielkości katalogu, aktualnych opłat,
+autentyczności lub partnerstwa.
+-->
+<style>
+:root {
+  color-scheme: light;
+  --paper: #f5f2ed;
+  --white: #fffefa;
+  --ink: #292822;
+  --muted: #625f56;
+  --line: #d8d2c8;
+  --copper: #733f2d;
+  --wash: #eae1d6;
+  --sage: #dfe6dd;
+  --radius: 6px;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font: 16px/1.7 system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+a {
+  color: inherit;
+  text-underline-offset: 4px;
+}
+a:hover {
+  text-decoration-thickness: 2px;
+}
+a:focus-visible,
+summary:focus-visible,
+input:focus-visible {
+  outline: 3px solid var(--copper);
+  outline-offset: 5px;
+}
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  background: #eeede9;
+}
+figure,
+p,
+h1,
+h2,
+h3 {
+  margin: 0;
+}
+p + p {
+  margin-top: 15px;
+}
+h1,
+h2,
+h3 {
+  line-height: 1.13;
+  letter-spacing: -.035em;
+}
+h1 {
+  font-size: clamp(2.65rem, 7.4vw, 6.4rem);
+  font-weight: 650;
+  max-width: 1050px;
+}
+h2 {
+  font-size: clamp(1.85rem, 3.5vw, 3rem);
+  font-weight: 600;
+}
+h3 {
+  font-size: 1.4rem;
+  font-weight: 650;
+}
+.wrap {
+  width: min(1180px, calc(100% - 48px));
+  margin: auto;
+}
+.mast {
+  border-bottom: 1px solid var(--line);
+}
+.mast .wrap {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  align-items: center;
+  padding-block: 21px;
+}
+.brand {
+  font-size: 1.2rem;
+  font-weight: 800;
+  letter-spacing: -.045em;
+  text-decoration: none;
+}
+.edition,
+.eyebrow {
+  font-size: .75rem;
+  text-transform: uppercase;
+  letter-spacing: .13em;
+  font-weight: 700;
+}
+.edition {
+  color: var(--muted);
+}
+.category-area {
+  padding-block: 23px;
+}
+.category-label {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 12px;
+  color: var(--muted);
+  font-size: .8rem;
+}
+.category-label:after {
+  content: "";
+  height: 1px;
+  flex: 1;
+  background: var(--line);
+}
+.categories {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 8px;
+}
+.categories a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  background: var(--white);
+  border: 1px solid var(--line);
+  padding: 10px 12px;
+  font-size: .84rem;
+  text-decoration: none;
+  min-height: 49px;
+}
+.categories a:hover {
+  border-color: var(--copper);
+  color: var(--copper);
+}
+.categories span {
+  color: var(--copper);
+}
+.intro {
+  padding: 32px 0 42px;
+}
+.eyebrow {
+  color: var(--copper);
+  margin-bottom: 20px;
+}
+.intro h1 span {
+  color: var(--copper);
+}
+.intro-bottom {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr;
+  gap: 60px;
+  margin-top: 28px;
+  align-items: start;
+}
+.lead {
+  font-size: 1.13rem;
+  max-width: 710px;
+}
+.note {
+  font-size: .88rem;
+  color: var(--muted);
+  border-left: 2px solid var(--copper);
+  padding-left: 20px;
+}
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  padding: 12px 20px;
+  background: var(--copper);
+  color: white;
+  text-decoration: none;
+  font-weight: 650;
+  border-radius: var(--radius);
+  margin-top: 21px;
+}
+.button:hover {
+  background: #532b1d;
+}
+.answer {
+  border-top: 1px solid var(--ink);
+  border-bottom: 1px solid var(--ink);
+  padding: 25px 0;
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 30px;
+}
+.answer h2 {
+  font-size: 1.15rem;
+  letter-spacing: -.01em;
+}
+.answer p {
+  font-size: 1.06rem;
+  max-width: 850px;
+}
+.section {
+  padding-block: 58px;
+}
+.section-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 35px;
+  margin-bottom: 28px;
+}
+.section-heading p {
+  max-width: 370px;
+  color: var(--muted);
+  font-size: .93rem;
+}
+.gallery {
+  display: grid;
+  grid-template-columns: 1.15fr 1fr 1fr;
+  gap: 16px;
+}
+.photo {
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+.photo .image-box {
+  height: 270px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #eeede9;
+}
+.photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.photo figcaption {
+  padding: 19px 21px;
+  font-size: .87rem;
+  color: var(--muted);
+}
+.photo strong {
+  display: block;
+  color: var(--ink);
+  font-size: 1.07rem;
+  margin-bottom: 5px;
+}
+.photo-main {
+  grid-row: span 2;
+  display: flex;
+  flex-direction: column;
+}
+.photo-main .image-box {
+  height: auto;
+  flex: 1;
+  min-height: 400px;
+}
+.photo-main img {
+  max-height: 550px;
+}
+.photo-main figcaption {
+  background: var(--wash);
+}
+.smallprint {
+  margin-top: 16px;
+  font-size: .8rem;
+  color: var(--muted);
+  max-width: 900px;
+}
+.matrix {
+  background: var(--white);
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+.matrix-layout {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 50px;
+}
+.matrix-layout p {
+  margin-top: 18px;
+  color: var(--muted);
+}
+.table-scroll {
+  overflow-x: auto;
+}
+table {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: .91rem;
+}
+caption {
+  text-align: left;
+  color: var(--muted);
+  padding-bottom: 12px;
+}
+th,
+td {
+  text-align: left;
+  vertical-align: top;
+  border-bottom: 1px solid var(--line);
+  padding: 14px 12px;
+}
+th {
+  font-size: .75rem;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  background: var(--wash);
+}
+td:first-child {
+  font-weight: 650;
+}
+tbody tr:last-child td {
+  border-bottom: 0;
+}
+.journal {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: 45px;
+}
+.journal-side {
+  color: var(--muted);
+  font-size: .86rem;
+}
+.journal-side strong {
+  display: block;
+  font-size: 2.7rem;
+  line-height: 1;
+  color: var(--copper);
+  letter-spacing: -.05em;
+  margin-bottom: 16px;
+}
+.story {
+  padding-bottom: 33px;
+  margin-bottom: 33px;
+  border-bottom: 1px solid var(--line);
+}
+.story:last-child {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+.story h3 {
+  font-size: clamp(1.5rem, 3vw, 2.1rem);
+  margin-bottom: 20px;
+  max-width: 760px;
+}
+.story .tag {
+  color: var(--copper);
+  font-size: .77rem;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+.story p {
+  max-width: 850px;
+}
+.takeaway {
+  background: var(--wash);
+  padding: 14px 18px;
+  margin-top: 20px;
+  border-left: 3px solid var(--copper);
+  font-size: .92rem;
+}
+.check-band {
+  background: var(--sage);
+  padding: 35px;
+  border-radius: var(--radius);
+  display: grid;
+  grid-template-columns: 1fr 1.3fr;
+  gap: 45px;
+}
+.check-band h2 {
+  font-size: 2rem;
+}
+.check-band p {
+  margin-top: 15px;
+}
+.checklist {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  min-width: 0;
+}
+.checklist legend {
+  font-weight: 650;
+  margin-bottom: 10px;
+}
+.checklist label {
+  display: flex;
+  gap: 12px;
+  align-items: start;
+  padding: 10px 0;
+  border-bottom: 1px solid #bcc9b9;
+  font-size: .92rem;
+}
+.checklist input {
+  width: 18px;
+  height: 18px;
+  margin-top: 6px;
+  flex-shrink: 0;
+  accent-color: var(--copper);
+}
+output {
+  display: block;
+  font-weight: 700;
+  margin-top: 12px;
+}
+.terms {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+.terms details {
+  border: 1px solid var(--line);
+  background: var(--white);
+  padding: 16px 20px;
+  border-radius: var(--radius);
+}
+summary {
+  cursor: pointer;
+  font-weight: 650;
+  line-height: 1.45;
+}
+summary::marker {
+  color: var(--copper);
+}
+.terms p {
+  color: var(--muted);
+  font-size: .87rem;
+  margin-top: 14px;
+}
+.terms ul {
+  padding-left: 20px;
+  margin: 13px 0 0;
+  font-size: .89rem;
+}
+.terms li {
+  margin-block: 6px;
+}
+.faq-layout {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 55px;
+}
+.faq-layout > div:first-child p {
+  margin-top: 18px;
+  color: var(--muted);
+}
+.faq details {
+  padding: 20px 0;
+  border-bottom: 1px solid var(--line);
+}
+.faq details:first-child {
+  padding-top: 0;
+}
+.faq details p {
+  margin-top: 12px;
+  color: var(--muted);
+  font-size: .94rem;
+}
+.closing {
+  background: var(--ink);
+  color: var(--white);
+  padding: 43px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 35px;
+  border-radius: var(--radius);
+}
+.closing h2 {
+  max-width: 700px;
+}
+.closing .button {
+  background: var(--wash);
+  color: var(--ink);
+  margin: 0;
+  flex-shrink: 0;
+}
+.footer {
+  padding-block: 30px;
+  color: var(--muted);
+  font-size: .8rem;
+}
+.footer .wrap {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+}
+.footer p {
+  max-width: 800px;
+}
+@media (min-width: 900px) {
+  .defer {
+    content-visibility: auto;
+    contain-intrinsic-size: auto 850px;
+  }
+}
+@media (max-width: 900px) {
+  .categories {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  .intro-bottom,
+  .matrix-layout,
+  .faq-layout {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+  .gallery {
+    grid-template-columns: 1fr 1fr;
+  }
+  .photo-main {
+    grid-row: auto;
+    grid-column: span 2;
+  }
+  .photo-main .image-box {
+    min-height: 300px;
+    height: 320px;
+  }
+  .photo-main img {
+    width: auto;
+    max-width: 100%;
+  }
+  .journal {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+  .journal-side {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  .journal-side strong {
+    margin: 0;
+  }
+  .check-band {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+  .closing {
+    align-items: start;
+    flex-direction: column;
+  }
+}
+@media (max-width: 600px) {
+  .wrap {
+    width: calc(100% - 30px);
+  }
+  .mast .wrap {
+    align-items: start;
+  }
+  .edition {
+    max-width: 130px;
+    text-align: right;
+    font-size: .63rem;
+  }
+  .categories {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .categories a {
+    font-size: .79rem;
+    padding: 9px 10px;
+  }
+  .intro {
+    padding-top: 23px;
+  }
+  .intro-bottom {
+    margin-top: 22px;
+  }
+  .section {
+    padding-block: 38px;
+  }
+  .section-heading {
+    align-items: start;
+    flex-direction: column;
+    gap: 16px;
+  }
+  .answer {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  .gallery {
+    gap: 10px;
+  }
+  .photo .image-box {
+    height: 200px;
+  }
+  .photo-main .image-box {
+    height: 300px;
+  }
+  .photo figcaption {
+    padding: 15px;
+    font-size: .8rem;
+  }
+  .photo strong {
+    font-size: .95rem;
+  }
+  .terms {
+    grid-template-columns: 1fr;
+  }
+  .check-band,
+  .closing {
+    padding: 24px;
+  }
+  .footer .wrap {
+    flex-direction: column;
+    gap: 12px;
+  }
+  .matrix table {
+    min-width: 520px;
+  }
+}
+@media (prefers-reduced-motion: no-preference) {
+  a {
+    transition: background-color .15s, color .15s, border-color .15s;
+  }
+}
+@media print {
+  .categories,
+  .button,
+  .check-band {
+    display: none;
+  }
+  body {
+    background: white;
+    color: black;
+  }
+  .defer {
+    content-visibility: visible;
+  }
+  .wrap {
+    width: 100%;
+  }
+  details {
+    break-inside: avoid;
+  }
+  .closing {
+    background: white;
+    color: black;
+    border: 1px solid #aaa;
+  }
+}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://www.hipobuyfind.com/#organization",
+      "name": "hipobuyfind.com",
+      "url": "https://www.hipobuyfind.com"
+    },
+    {
+      "@type": "WebPage",
+      "@id": "#strona",
+      "name": "FansBuy spreadsheet: jak porównywać znaleziska",
+      "description": "Polski przewodnik po porównywaniu linków, wariantów i zdjęć butów, ubrań oraz dodatków.",
+      "inLanguage": "pl",
+      "publisher": {
+        "@id": "https://www.hipobuyfind.com/#organization"
+      },
+      "mainEntity": {
+        "@id": "#poradnik"
+      },
+      "hasPart": [
+        {"@id": "#artykul-1"},
+        {"@id": "#artykul-2"},
+        {"@id": "#artykul-3"},
+        {"@id": "#pytania"}
+      ]
+    },
+    {
+      "@type": "Article",
+      "@id": "#poradnik",
+      "headline": "FansBuy spreadsheet — najpierw informacje, potem wybór",
+      "inLanguage": "pl",
+      "author": {
+        "@type": "Organization",
+        "name": "Redakcja hipobuyfind.com"
+      },
+      "publisher": {
+        "@id": "https://www.hipobuyfind.com/#organization"
+      },
+      "about": [
+        {
+          "@type": "Thing",
+          "name": "FansBuy spreadsheet"
+        },
+        {
+          "@type": "Thing",
+          "name": "Porównywanie informacji o produktach"
+        }
+      ],
+      "mainEntityOfPage": {
+        "@id": "#strona"
+      },
+      "description": "Jak korzystać z katalogu znalezisk, identyfikować wariant i odróżniać fotografie referencyjne od dokumentacji własnego zamówienia."
+    },
+    {
+      "@type": "Article",
+      "@id": "#artykul-1",
+      "headline": "Zdjęcie podobne, produkt inny: jak zachować kontekst linku",
+      "inLanguage": "pl",
+      "author": {
+        "@type": "Organization",
+        "name": "Redakcja hipobuyfind.com"
+      },
+      "isPartOf": {
+        "@id": "#strona"
+      },
+      "description": "Zachowaj oryginalny adres, identyfikator, wariant oraz datę sprawdzenia i porównaj je ponownie przed zamówieniem."
+    },
+    {
+      "@type": "Article",
+      "@id": "#artykul-2",
+      "headline": "Dopasowanie zaczyna się od sposobu pomiaru",
+      "inLanguage": "pl",
+      "author": {
+        "@type": "Organization",
+        "name": "Redakcja hipobuyfind.com"
+      },
+      "isPartOf": {
+        "@id": "#strona"
+      },
+      "description": "Porównuj te same wymiary i jednostki; oddziel szerokość ubrania mierzonego na płasko od obwodu ciała."
+    },
+    {
+      "@type": "Article",
+      "@id": "#artykul-3",
+      "headline": "Kiedy dodatkowe zdjęcie ma większą wartość niż kolejny produkt",
+      "inLanguage": "pl",
+      "author": {
+        "@type": "Organization",
+        "name": "Redakcja hipobuyfind.com"
+      },
+      "isPartOf": {
+        "@id": "#strona"
+      },
+      "description": "Formułuj konkretne prośby o zdjęcia QC, zapisuj brakujące dane i rozdzielaj cenę produktu od pozostałych kosztów."
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "#pytania",
+      "inLanguage": "pl",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Czy FansBuy spreadsheet musi być plikiem Excel?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Nie. Określenie może oznaczać arkusz albo internetowy katalog znalezisk. Ważne, aby wpis prowadził do konkretnego produktu i pozwalał sprawdzić wariant oraz źródło."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Czy ta strona jest oficjalną stroną FansBuy?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Nie. To niezależny materiał redakcyjny hipobuyfind.com. Nie obsługuje kont, płatności ani reklamacji FansBuy i nie deklaruje współpracy z wymienionymi markami."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Co zrobić, gdy link otwiera inny wariant?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Porównaj identyfikator produktu, zdjęcia oraz dostępne opcje z zapisanym źródłem. Nie wybieraj podobnego wariantu na podstawie samej miniatury; wyjaśnij różnicę przed zamówieniem."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Czy zdjęcia QC potwierdzają autentyczność?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Nie. Zdjęcia QC pomagają ocenić widoczne cechy egzemplarza. Nie potwierdzają samodzielnie autentyczności, składu materiału ani trwałości. Fotografie starszego zamówienia nie dokumentują Twojej sztuki."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Jak porównywać rozmiary ubrań?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Porównuj wymiary w centymetrach z dobrze dopasowanym ubraniem, zachowując tę samą metodę pomiaru. Szerokość na płasko i obwód to różne wartości; litera rozmiaru nie wystarcza."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Czy cena produktu obejmuje dostawę do Polski?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Nie zakładaj tego. Sprawdź osobno towar, przesyłkę krajową, usługi, płatność, przewalutowanie i transport międzynarodowy oraz ewentualne należności importowe. Nieznany koszt oznacz jako nieustalony."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+<link rel="canonical" href="https://kakobuyfinds.github.io/sbyvq/">
+</head>
+<body>
+<header class="mast">
+  <div class="wrap">
+    <a class="brand" href="https://www.hipobuyfind.com">hipobuyfind.com</a>
+    <p class="edition">Przewodnik zakupowy<br>Wydanie polskie</p>
+  </div>
+</header>
+
+<main class="wrap">
+  <nav class="category-area" aria-label="Kategorie produktów">
+    <p class="category-label">Wybierz kategorię, którą chcesz porównać</p>
+    <div class="categories">
+      <a href="https://hipobuyfind.com/category-911-Shoes.html">
+        Buty <span aria-hidden="true">↗</span>
+      </a>
+      <a href="https://hipobuyfind.com/category-912-Hoodies%2FSweaters.html">
+        Bluzy i swetry <span aria-hidden="true">↗</span>
+      </a>
+      <a href="https://hipobuyfind.com/category-913-T-Shirts.html">
+        Koszulki <span aria-hidden="true">↗</span>
+      </a>
+      <a href="https://hipobuyfind.com/category-914-Jackets.html">
+        Kurtki <span aria-hidden="true">↗</span>
+      </a>
+      <a href="https://hipobuyfind.com/category-915-Pants%2FShorts.html">
+        Spodnie i szorty <span aria-hidden="true">↗</span>
+      </a>
+      <a href="https://hipobuyfind.com/category-916-Headwear.html">
+        Nakrycia głowy <span aria-hidden="true">↗</span>
+      </a>
+      <a href="https://hipobuyfind.com/category-917-Sets.html">
+        Komplety <span aria-hidden="true">↗</span>
+      </a>
+      <a href="https://hipobuyfind.com/category-918-underwear%2Funderpants.html">
+        Bielizna <span aria-hidden="true">↗</span>
+      </a>
+      <a href="https://hipobuyfind.com/category-919-Jersey.html">
+        Koszulki sportowe <span aria-hidden="true">↗</span>
+      </a>
+      <a href="https://hipobuyfind.com/category-920-Accessories.html">
+        Akcesoria <span aria-hidden="true">↗</span>
+      </a>
+    </div>
+  </nav>
+
+  <section class="intro" aria-labelledby="tytul">
+    <p class="eyebrow">Odkrywaj uważnie / porównuj konkretnie</p>
+    <h1 id="tytul">
+      FansBuy spreadsheet<br>
+      <span>Najpierw informacje.<br>Potem wybór.</span>
+    </h1>
+
+    <div class="intro-bottom">
+      <div>
+        <p class="lead">
+          Dobry katalog skraca poszukiwania. Dobra decyzja wymaga jeszcze kilku
+          odpowiedzi: jaki to wariant, co naprawdę pokazuje zdjęcie i których
+          danych brakuje? Ten poradnik pomaga zamienić zapisane inspiracje
+          w czytelną listę rzeczy do sprawdzenia.
+        </p>
+        <a class="button" href="https://www.hipobuyfind.com">
+          Przeglądaj znaleziska <span aria-hidden="true">↗</span>
+        </a>
+      </div>
+      <p class="note">
+        Niezależny materiał redakcyjny. Odnośniki kategorii prowadzą
+        do hipobuyfind.com. Fotografie marek służą jako odniesienia wizualne,
+        a nie jako oferta sprzedaży ani dokumentacja konkretnego zamówienia.
+      </p>
+    </div>
+  </section>
+
+  <section class="answer" aria-labelledby="definicja">
+    <h2 id="definicja">Czym jest FansBuy spreadsheet?</h2>
+    <p>
+      To określenie listy lub katalogu produktów wyszukiwanych z myślą
+      o zakupach przez FansBuy. Jego wartością jest uporządkowanie odnośników
+      i informacji. Sam wpis w katalogu nie potwierdza dostępności,
+      autentyczności ani tego, że wybrany wariant będzie pasować.
+    </p>
+  </section>
+
+  <section class="section" aria-labelledby="obserwacje">
+    <div class="section-heading">
+      <div>
+        <p class="eyebrow">Atlas szczegółów</p>
+        <h2 id="obserwacje">Każdy przedmiot<br>stawia inne pytanie.</h2>
+      </div>
+      <p>
+        Zamiast oceniać całą ofertę po jednej miniaturze, wybierz cechę,
+        która ma znaczenie podczas noszenia.
+      </p>
+    </div>
+
+    <div class="gallery">
+      <figure class="photo photo-main">
+        <div class="image-box">
+          <img
+            src="https://static.nike.com/a/images/t_default/u_9ddf04c7-2a9a-4d76-add1-d15af8f0263d,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/1297bf15-b0fb-4dbd-a45e-25b362df01be/AIR+MAX+DN8.png"
+            width="320"
+            height="400"
+            alt="Czarny but Nike Air Max Dn8 z pomarańczowymi panelami i czerwonymi elementami podeszwy, widok z boku"
+            loading="eager"
+            fetchpriority="high"
+            decoding="async">
+        </div>
+        <figcaption>
+          <strong>Nike / sylwetka buta</strong>
+          Boczny profil pokazuje proporcje. Do porównania pary potrzebujesz
+          również obu nosków, pięt i informacji o rozmiarze. Komfortu nie
+          odczytasz ze zdjęcia.
+        </figcaption>
+      </figure>
+
+      <figure class="photo">
+        <div class="image-box">
+          <img
+            src="https://media.gucci.com/style/DarkGray_Center_0_0_490x490/1792686640/A00HB0_XJIEU_9066_001_100_0000_Light-cotton-jersey-t-shirt-with-print.jpg"
+            width="490"
+            height="490"
+            alt="Biała koszulka Gucci z krótkimi rękawami i niewielkim jasnym motywem na piersi, widok z przodu"
+            loading="lazy"
+            decoding="async">
+        </div>
+        <figcaption>
+          <strong>Gucci / linia ramion</strong>
+          Sprawdź szerokość, długość i położenie szwu. Luźny fason oraz
+          większy rozmiar nie oznaczają tego samego.
+        </figcaption>
+      </figure>
+
+      <figure class="photo">
+        <div class="image-box">
+          <img
+            src="https://assets.hermes.com/is/image/hermesproduct/004103S%2002_front_wm_103?wid=480&amp;hei=640&amp;fit=fit&amp;$product_default_bg$"
+            width="480"
+            height="640"
+            alt="Kwadratowa apaszka Hermès City of Light z wielobarwną ilustracją architektury i zieloną bordiurą"
+            loading="lazy"
+            decoding="async">
+        </div>
+        <figcaption>
+          <strong>Hermès / skala wzoru</strong>
+          Obejrzyj całą kompozycję i krawędzie. Rodzaj włókna potwierdzaj
+          w opisie materiału, nie po samym połysku.
+        </figcaption>
+      </figure>
+
+      <figure class="photo">
+        <div class="image-box">
+          <img
+            src="https://us.louisvuitton.com/images/is/image/lv/1/PP_VP_M/louis-vuitton--M5381Y_PM2_Front%20view.jpg?wid=480&amp;hei=557"
+            width="480"
+            height="557"
+            alt="Czarna czapka Louis Vuitton Monogram Essential z daszkiem i wzorem monogramu"
+            loading="lazy"
+            decoding="async">
+        </div>
+        <figcaption>
+          <strong>Louis Vuitton / kształt czapki</strong>
+          Obwód, głębokość i regulacja wpływają na dopasowanie. Zdjęcie
+          z przodu nie pokaże całego zapięcia.
+        </figcaption>
+      </figure>
+
+      <figure class="photo">
+        <div class="image-box">
+          <img
+            src="https://assets.christiandior.com/is/image/diorprod/N1308DVOCYD301_SBG_E01-3?$r9x10_raw$&amp;crop=0,0,4000,5000&amp;wid=480&amp;hei=520&amp;scale=1"
+            width="480"
+            height="520"
+            alt="Naszyjnik Dior w złotym kolorze z zawieszkami w kształcie liter D I O R i przedłużką przy zapięciu"
+            loading="lazy"
+            decoding="async">
+        </div>
+        <figcaption>
+          <strong>Dior / zapięcie i długość</strong>
+          Sprawdź zakres regulacji i wielkość zawieszek. Kolor metalu
+          na zdjęciu nie jest informacją o jego składzie.
+        </figcaption>
+      </figure>
+    </div>
+
+    <p class="smallprint">
+      Fotografie pochodzą z serwisów wymienionych marek i przedstawiają
+      przykłady wzornictwa. Nie wskazują dostępności tych modeli
+      w hipobuyfind.com ani współpracy handlowej. Nazwy i znaki należą
+      do ich właścicieli.
+    </p>
+  </section>
+
+  <section class="section matrix defer" aria-labelledby="karta">
+    <div class="matrix-layout">
+      <div>
+        <p class="eyebrow">Narzędzie porównania</p>
+        <h2 id="karta">Zapisz to,<br>co zmienia decyzję.</h2>
+        <p>
+          Linki do produktów FansBuy są przydatniejsze, gdy obok adresu
+          zostaje krótka notatka. Puste pole oznacza brak danych,
+          a nie potwierdzenie zgodności.
+        </p>
+      </div>
+
+      <div
+        class="table-scroll"
+        role="region"
+        aria-label="Pola przydatne w porównaniu produktów"
+        tabindex="0">
+        <table>
+          <caption>Minimalna karta produktu do własnych notatek</caption>
+          <thead>
+            <tr>
+              <th scope="col">Pole</th>
+              <th scope="col">Co zapisać</th>
+              <th scope="col">Dlaczego</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Źródło</td>
+              <td>Oryginalny URL i identyfikator</td>
+              <td>Podobne zdjęcie może prowadzić do innej oferty.</td>
+            </tr>
+            <tr>
+              <td>Wariant</td>
+              <td>Kolor, rozmiar, wersja, liczba sztuk</td>
+              <td>Miniatura nie określa zawartości zamówienia.</td>
+            </tr>
+            <tr>
+              <td>Wymiary</td>
+              <td>Centymetry i sposób pomiaru</td>
+              <td>Wyniki można porównać tylko przy tej samej metodzie.</td>
+            </tr>
+            <tr>
+              <td>Fotografie</td>
+              <td>Katalogowe, historyczne lub własnego zamówienia</td>
+              <td>Każdy zestaw opisuje inny kontekst.</td>
+            </tr>
+            <tr>
+              <td>Brakujące dane</td>
+              <td>Konkretne pytanie do wyjaśnienia</td>
+              <td>Łatwiej wrócić do otwartej kwestii.</td>
+            </tr>
+            <tr>
+              <td>Aktualność</td>
+              <td>Data ostatniego sprawdzenia</td>
+              <td>Oferta i dostępne opcje mogą się zmienić.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="section defer" aria-labelledby="czytelnia">
+    <div class="section-heading">
+      <div>
+        <p class="eyebrow">Czytelnia / poradnik FansBuy spreadsheet</p>
+        <h2 id="czytelnia">Trzy problemy.<br>Trzy konkretne rozwiązania.</h2>
+      </div>
+      <p>
+        Krótkie artykuły o błędach, które łatwo przeoczyć podczas
+        zbierania inspiracji.
+      </p>
+    </div>
+
+    <div class="journal">
+      <aside class="journal-side">
+        <strong>01—03</strong>
+        <p>Od zapisanego zdjęcia do informacji, którą da się sprawdzić.</p>
+      </aside>
+
+      <div>
+        <article class="story" id="artykul-1">
+          <p class="tag">01 / tożsamość oferty</p>
+          <h3>Zdjęcie podobne, produkt inny: jak zachować kontekst linku</h3>
+          <p>
+            Znajdujesz interesującą kurtkę, zapisujesz obraz, a kilka dni
+            później otwierasz podobną ofertę. Wygląd się zgadza, lecz inny
+            może być sprzedawca, materiał, wersja kieszeni albo zestaw
+            rozmiarów. Dlatego zdjęcie traktuj jako początek poszukiwania.
+            Razem z nim zachowaj oryginalny adres, identyfikator produktu
+            i nazwę wybranego wariantu.
+          </p>
+          <p>
+            Przed przejściem dalej porównaj trzy elementy: numer produktu,
+            zestaw zdjęć i listę opcji. Jeżeli katalog pokazuje kilka
+            kolorów, upewnij się, że otwarta oferta dotyczy właśnie tego,
+            który zapisałeś. Wybór miniatury w katalogu może zmieniać
+            jedynie podgląd zdjęcia, bez ustawiania opcji zamówienia.
+          </p>
+          <p>
+            Gdy adres przestaje działać, zachowaj stary rekord i oznacz go
+            jako nieaktywny. Nową ofertę dodaj osobno. Dzięki temu nie
+            przeniesiesz automatycznie wcześniejszych uwag o rozmiarze
+            czy zdjęciach na inny produkt. Przy komplecie sprawdź
+            dodatkowo, czy oferta obejmuje obie części i ile sztuk
+            trafia do zamówienia.
+          </p>
+          <div class="takeaway">
+            <strong>Do zapisania:</strong> oryginalny URL + identyfikator +
+            wariant + data. To prostsze niż późniejsze odtwarzanie wyboru
+            z samego zrzutu ekranu.
+          </div>
+        </article>
+
+        <article class="story" id="artykul-2">
+          <p class="tag">02 / rozmiary w FansBuy spreadsheet</p>
+          <h3>Dopasowanie zaczyna się od sposobu pomiaru</h3>
+          <p>
+            Dwie koszulki oznaczone literą M nie muszą mieć podobnej
+            szerokości. Zacznij od ubrania, które już dobrze leży.
+            Rozłóż je bez naciągania i zmierz szerokość pod pachami,
+            długość oraz ramiona. Następnie porównaj te same odcinki
+            z tabelą konkretnego wariantu. Szerokości mierzonej
+            na płasko nie zestawiaj bezpośrednio z obwodem ciała.
+          </p>
+          <p>
+            W spodniach zapisz, czy pas mierzono swobodnie, czy
+            po rozciągnięciu, oraz czy długość dotyczy nogawki
+            wewnętrznej, czy całego boku. Przy kurtce uwzględnij ubranie
+            noszone pod spodem. Nie dodawaj automatycznie tego samego
+            zapasu do każdego fasonu: cienka koszulka i sztywna kurtka
+            układają się inaczej.
+          </p>
+          <p>
+            W przypadku butów rozróżnij długość stopy, długość wkładki
+            i zalecany wymiar z tabeli producenta. Nie są zamienne.
+            Przy czapce zapytaj o obwód oraz zakres regulacji; przy
+            naszyjniku o długość użytkową i przedłużkę. Jeśli opis nie
+            wyjaśnia sposobu pomiaru, poproś o doprecyzowanie zamiast
+            wybierać rozmiar na podstawie podobieństwa do innej marki.
+          </p>
+          <div class="takeaway">
+            <strong>Praktyczna zasada:</strong> ta sama cecha, ta sama
+            jednostka, ta sama metoda. Dopiero wtedy porównanie
+            rozmiarów ma sens.
+          </div>
+        </article>
+
+        <article class="story" id="artykul-3">
+          <p class="tag">03 / zdjęcia QC FansBuy i brakujące dane</p>
+          <h3>Kiedy dodatkowe zdjęcie ma większą wartość niż kolejny produkt</h3>
+          <p>
+            Duża liczba fotografii nie rozwiązuje konkretnej wątpliwości,
+            jeżeli wszystkie pokazują przód. Zamiast prosić ogólnie
+            o „więcej zdjęć”, nazwij brakującą informację: zbliżenie
+            zapięcia, obie pięty w jednym ujęciu, linia szwu przy
+            rękawie albo pomiar długości przy widocznej podziałce.
+            Sprawdź wcześniej dostępność i ewentualny koszt takiej usługi.
+          </p>
+          <p>
+            Rozróżniaj zdjęcia reklamowe, fotografie historycznych
+            zamówień i dokumentację własnego egzemplarza. Pierwsze
+            pomagają poznać wzór, drugie mogą wskazać szczegóły warte
+            obejrzenia, a trzecie pozwalają odnieść pytanie do konkretnej
+            sztuki. Żadna fotografia sama w sobie nie potwierdza składu
+            metalu, trwałości klejenia ani autentyczności. Inne światło
+            i balans bieli mogą też zmienić odbiór koloru.
+          </p>
+          <p>
+            Tak samo postępuj z kosztami: oddziel kwotę za towar
+            od transportu krajowego, usług, płatności, przewalutowania
+            i przesyłki międzynarodowej. Sprawdź, czy pojawiają się
+            należności importowe. Nieznaną pozycję oznacz jako
+            nieustaloną, zamiast wpisywać zero. Wybór jest łatwiejszy,
+            gdy widzisz zarówno zalety produktu, jak i pytania,
+            na które jeszcze nie ma odpowiedzi.
+          </p>
+          <div class="takeaway">
+            <strong>Przykład pytania:</strong> „Czy można otrzymać zdjęcie
+            tylnego zapięcia i pomiar zakresu regulacji tego wariantu?”
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="check-band" aria-labelledby="przeglad">
+    <div>
+      <p class="eyebrow">Krótki przegląd własnych notatek</p>
+      <h2 id="przeglad">Czy masz komplet podstaw?</h2>
+      <p>
+        Zaznacz informacje, które już sprawdziłeś. Lista pomaga
+        uporządkować pracę; nie ocenia sprzedawcy ani jakości produktu.
+      </p>
+    </div>
+
+    <form id="kontrola">
+      <fieldset class="checklist">
+        <legend>Sprawdzone elementy</legend>
+        <label>
+          <input type="checkbox" name="check" value="source">
+          Mam oryginalny adres i identyfikator produktu.
+        </label>
+        <label>
+          <input type="checkbox" name="check" value="variant">
+          Wiem, jaki wariant i liczbę sztuk porównuję.
+        </label>
+        <label>
+          <input type="checkbox" name="check" value="measure">
+          Znam potrzebne wymiary i metodę pomiaru.
+        </label>
+        <label>
+          <input type="checkbox" name="check" value="unknown">
+          Zapisałem brakujące informacje oraz nieustalone koszty.
+        </label>
+      </fieldset>
+      <output id="postep" aria-live="polite">
+        Zaznaczono: 0 z 4 elementów.
+      </output>
+    </form>
+  </section>
+
+  <section class="section defer" aria-labelledby="tematy">
+    <div class="section-heading">
+      <div>
+        <p class="eyebrow">Mapa pytań</p>
+        <h2 id="tematy">Szukaj odpowiedzi,<br>nie kolejnych ogólników.</h2>
+      </div>
+      <p>
+        28 szczegółowych tematów do dalszego wyszukiwania.
+        To propozycje zapytań, a nie dane o popularności słów kluczowych.
+      </p>
+    </div>
+
+    <div class="terms">
+      <details>
+        <summary>Źródło i działanie katalogu</summary>
+        <p>Gdy chcesz zrozumieć wpis i zachować jego pochodzenie:</p>
+        <ul>
+          <li>FansBuy spreadsheet poradnik dla początkujących</li>
+          <li>jak czytać wpis w katalogu FansBuy</li>
+          <li>jak zachować oryginalny link produktu</li>
+          <li>jak porównać identyfikatory ofert FansBuy</li>
+          <li>co zrobić z nieaktywnym linkiem w arkuszu</li>
+          <li>jak zapisywać warianty produktów w katalogu</li>
+          <li>czym różni się katalog od strony zamówienia</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>Buty i odzież</summary>
+        <p>Gdy najważniejsze są wymiary, fason i zawartość oferty:</p>
+        <ul>
+          <li>FansBuy spreadsheet buty porównanie rozmiarów</li>
+          <li>długość stopy a długość wkładki buta</li>
+          <li>jak mierzyć koszulkę na płasko</li>
+          <li>tabela rozmiarów bluzy w centymetrach</li>
+          <li>jak porównać szerokość ramion kurtki</li>
+          <li>pas spodni rozciągnięty czy swobodny</li>
+          <li>jak sprawdzić zawartość kompletu odzieży</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>Fotografie i dodatki</summary>
+        <p>Gdy jedna miniatura nie pokazuje potrzebnego szczegółu:</p>
+        <ul>
+          <li>zdjęcia QC FansBuy a fotografie katalogowe</li>
+          <li>jak rozpoznać zdjęcia starszego zamówienia</li>
+          <li>jak poprosić o konkretny pomiar na zdjęciu</li>
+          <li>jak sprawdzić regulację czapki z daszkiem</li>
+          <li>długość naszyjnika i zakres przedłużki</li>
+          <li>jak porównać krawędzie apaszki</li>
+          <li>czy zdjęcie potwierdza skład biżuterii</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>Notatki i planowanie</summary>
+        <p>Gdy budujesz krótką listę i wracasz do niej później:</p>
+        <ul>
+          <li>jak stworzyć własną listę znalezisk FansBuy</li>
+          <li>jak zapisywać datę sprawdzenia produktu</li>
+          <li>jak oznaczać brakujące dane w arkuszu</li>
+          <li>jak porównywać dwa warianty tej samej oferty</li>
+          <li>cena produktu a całkowity koszt zamówienia</li>
+          <li>jak uwzględnić nieznany koszt dostawy</li>
+          <li>lista pytań przed zakupem ubrań online</li>
+        </ul>
+      </details>
+    </div>
+  </section>
+
+  <section class="section faq-layout defer" aria-labelledby="faq-tytul">
+    <div>
+      <p class="eyebrow">FAQ / odpowiedzi wprost</p>
+      <h2 id="faq-tytul">Zanim zapiszesz<br>kolejny link.</h2>
+      <p>
+        Najczęstsze pytania o katalogi, warianty i interpretację zdjęć.
+      </p>
+    </div>
+
+    <div class="faq" id="pytania">
+      <details open>
+        <summary>Czy FansBuy spreadsheet musi być plikiem Excel?</summary>
+        <p>Nie. Określenie może oznaczać arkusz albo internetowy katalog znalezisk. Ważne, aby wpis prowadził do konkretnego produktu i pozwalał sprawdzić wariant oraz źródło.</p>
+      </details>
+
+      <details>
+        <summary>Czy ta strona jest oficjalną stroną FansBuy?</summary>
+        <p>Nie. To niezależny materiał redakcyjny hipobuyfind.com. Nie obsługuje kont, płatności ani reklamacji FansBuy i nie deklaruje współpracy z wymienionymi markami.</p>
+      </details>
+
+      <details>
+        <summary>Co zrobić, gdy link otwiera inny wariant?</summary>
+        <p>Porównaj identyfikator produktu, zdjęcia oraz dostępne opcje z zapisanym źródłem. Nie wybieraj podobnego wariantu na podstawie samej miniatury; wyjaśnij różnicę przed zamówieniem.</p>
+      </details>
+
+      <details>
+        <summary>Czy zdjęcia QC potwierdzają autentyczność?</summary>
+        <p>Nie. Zdjęcia QC pomagają ocenić widoczne cechy egzemplarza. Nie potwierdzają samodzielnie autentyczności, składu materiału ani trwałości. Fotografie starszego zamówienia nie dokumentują Twojej sztuki.</p>
+      </details>
+
+      <details>
+        <summary>Jak porównywać rozmiary ubrań?</summary>
+        <p>Porównuj wymiary w centymetrach z dobrze dopasowanym ubraniem, zachowując tę samą metodę pomiaru. Szerokość na płasko i obwód to różne wartości; litera rozmiaru nie wystarcza.</p>
+      </details>
+
+      <details>
+        <summary>Czy cena produktu obejmuje dostawę do Polski?</summary>
+        <p>Nie zakładaj tego. Sprawdź osobno towar, przesyłkę krajową, usługi, płatność, przewalutowanie i transport międzynarodowy oraz ewentualne należności importowe. Nieznany koszt oznacz jako nieustalony.</p>
+      </details>
+    </div>
+  </section>
+
+  <section class="closing" aria-labelledby="dalej">
+    <h2 id="dalej">Wybierz kategorię.<br>Zachowaj dobry punkt odniesienia.</h2>
+    <a class="button" href="https://www.hipobuyfind.com">
+      Otwórz hipobuyfind.com <span aria-hidden="true">↗</span>
+    </a>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <p>
+      © 2026 hipobuyfind.com · Niezależny przewodnik po porównywaniu
+      produktów. Treści mają charakter informacyjny; aktualne warianty,
+      warunki i koszty sprawdzaj w odpowiedniej ofercie przed zamówieniem.
+    </p>
+    <a href="https://www.hipobuyfind.com">Przejdź do katalogu ↗</a>
+  </div>
+</footer>
+
+<script>
+(function () {
+  "use strict";
+
+  var form = document.getElementById("kontrola");
+  var output = document.getElementById("postep");
+
+  if (!form || !output) return;
+
+  function update() {
+    var count = form.querySelectorAll(
+      'input[type="checkbox"]:checked'
+    ).length;
+
+    output.textContent =
+      "Zaznaczono: " + count + " z 4 elementów." +
+      (count === 4 ? " Podstawowe notatki są uporządkowane." : "");
+  }
+
+  form.addEventListener("change", update);
+
+  form.addEventListener("submit", function (event) {
+    event.preventDefault();
+  });
+
+  update();
+})();
+</script>
+</body>
+</html>
